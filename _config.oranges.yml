@@ -1,0 +1,15 @@
+# 用户头像与昵称
+avatar:
+  author_photo: /images/avatar.png
+  author_nickname: Hawthorn
+  path: /
+
+# 友链详细信息：支持多个友链
+friends:
+  # nickname: 昵称
+  # site: 地址
+  # meta: 描述
+  -
+    nickname: Yanko
+    site: https://evergarden.ink/
+    meta:
