@@ -196,7 +196,7 @@ pre .javascript .function {
 .markdown-body .highlight {
   color: #ccc;
   background-color: #2d2d2d;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .markdown-body .highlight table td {
@@ -211,6 +211,8 @@ pre .javascript .function {
 .markdown-body .highlight .gutter pre {
   color: #999;
   background: #1b1b1b;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .highlight .code pre {

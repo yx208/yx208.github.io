@@ -6,10 +6,15 @@ avatar:
 
 # 友链详细信息：支持多个友链
 friends:
-  # nickname: 昵称
-  # site: 地址
-  # meta: 描述
   -
     nickname: Yanko
     site: https://evergarden.ink/
     meta:
+
+# 文章搜索
+search:
+  enable: false
+
+# 文章分享
+postShare:
+  enable: false
