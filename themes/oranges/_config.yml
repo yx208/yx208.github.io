@@ -96,7 +96,7 @@ navbar:
     key: categories
   -
     name: Tags
-    enable: true
+    enable: false
     path: /tags/
     key: tags
   -
@@ -106,7 +106,7 @@ navbar:
     key: friends
   -
     name: About
-    enable: true
+    enable: false
     path: /about/
     key: about
 
@@ -123,14 +123,10 @@ friends:
   # nickname: 昵称
   # site: 地址
   # meta: 描述
-#  -
-#    nickname: Zcheng
-#    site: https://zcheng.site/
-#    meta:
-#  -
-#    nickname: Hexo
-#    site: https://hexo.io/
-#    meta:
+  # -
+  #   nickname: Hexo
+  #   site: https://hexo.io/
+  #   meta:
 
 # 页脚信息
 footer:
@@ -145,7 +141,7 @@ footer:
     -
       name: github
       icon: github
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      path: https://github.com/yx208/
     # -
     #   name: email
     #   icon: envelope
