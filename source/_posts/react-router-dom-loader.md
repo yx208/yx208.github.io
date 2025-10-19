@@ -1,5 +1,6 @@
 ---
 title: React-Router-Dom createBrowserRouter 的 Loader 立即执行特性
+date: 2025/08/10 15:40:00
 ---
 
 ## 发现概述
