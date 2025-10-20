@@ -200,11 +200,8 @@ const router = createBrowserRouter([
 
 ## 总结
 
-React Router 的 `createBrowserRouter` 会立即执行匹配当前 URL 的 loader，这是一个重要的性能优化特性。了解这个行为有助于：
+React Router 的 `createBrowserRouter` 会立即执行匹配当前 URL 的 loader，理解这个优化特性有助于：
 
 - 正确理解代码执行顺序
 - 避免意外的副作用执行
-- 编写更可预测的应用程序
-- 充分利用这个特性提升用户体验
-
-这个特性体现了 React Router 从简单路由向数据驱动路由的演进，是现代 Web 应用性能优化的重要体现。
+- 利用它提升用户体验
