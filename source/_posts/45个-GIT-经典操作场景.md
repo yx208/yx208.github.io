@@ -129,7 +129,7 @@ git reset --hard SHA1234
 
 这样就完成了。
 
-## 「暂存(Staging)」
+## A.「暂存(Staging)」
 
 ### 我需要把暂存的内容添加到上一次的提交(commit)
 
@@ -171,7 +171,7 @@ git stash pop --index 0
 
 注意1: 这里使用`pop`仅仅是因为想尽可能保持幂等。注意2: 假如你不加上`--index`你会把暂存的文件标记为为存储。
 
-## 「未暂存(Unstaged)的内容」
+## B.「未暂存(Unstaged)的内容」
 
 ### 我想把未暂存的内容移动到一个新分支
 
@@ -236,7 +236,7 @@ git stash -p
 git stash drop
 ```
 
-## 「分支(Branches)」
+## C.「分支(Branches)」
 
 ### 我从错误的分支拉取了内容，或把内容拉取到了错误的分支
 
@@ -526,7 +526,7 @@ Switched to a new branch 'daves'
 
 这样就得到了一个`daves`分支的本地拷贝, 任何推过(pushed)的更新，远程都能看到.
 
-## 「Rebasing 和合并(Merging)」
+## D.「Rebasing 和合并(Merging)」
 
 ### 我想撤销rebase/merge
 
@@ -676,7 +676,7 @@ git log --graph --left-right --cherry-pick --oneline HEAD...feature/120-on-scrol
 git log main ^feature/120-on-scroll --no-merges
 ```
 
-## 交互式rebase(interactive rebase)可能出现的问题
+## E.交互式rebase(interactive rebase)可能出现的问题
 
 ### 这个rebase 编辑屏幕出现 'noop'
 
@@ -741,7 +741,7 @@ git rebase --continue
 git rebase --abort
 ```
 
-## 「Stash」
+## F.「Stash」
 
 ### 暂存所有改动
 
@@ -816,7 +816,7 @@ git stash create
 git stash store -m "code秘密花园" CREATED_SHA1
 ```
 
-## 「杂项(Miscellaneous Objects)」
+## G.「杂项(Miscellaneous Objects)」
 
 ### 克隆所有子模块
 
@@ -859,7 +859,7 @@ git update-ref refs/tags/<tag_name> <hash>
 
 做完提交后, 再修改作者，参见变更作者。然后, 应用变化, 再发起一个新的pull request。
 
-## 「跟踪文件(Tracking Files)」
+## H.「跟踪文件(Tracking Files)」
 
 ### 我只想改变一个文件名字的大小写，而不修改内容
 
@@ -873,7 +873,7 @@ git mv --force myfile MyFile
 git rm --cached log.txt
 ```
 
-## 「配置(Configuration)」
+## I.「配置(Configuration)」
 
 ### 我想给一些Git命令添加别名(alias)
 
