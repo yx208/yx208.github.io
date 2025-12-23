@@ -45,3 +45,16 @@ git push origin feat --force-with-lease
 * --force-with-lease 比 --force 更安全,它会检查远程分支是否有其他人的提交
 * 如果 rebase 过程中出现冲突,解决冲突后使用 git rebase --continue
 * 如果想取消 rebase,使用 git rebase --abort
+
+## 删除远程分支
+
+```base
+git push origin --delete <分支名>
+```
+
+简写
+
+```base
+git push origin :<分支名>
+```
+
