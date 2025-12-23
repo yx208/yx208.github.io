@@ -40,3 +40,8 @@ git rebase dev
 # 5. 强制推送到远程(如果之前已经推送过 feat 分支)
 git push origin feat --force-with-lease
 ```
+
+注意事项:
+* --force-with-lease 比 --force 更安全,它会检查远程分支是否有其他人的提交
+* 如果 rebase 过程中出现冲突,解决冲突后使用 git rebase --continue
+* 如果想取消 rebase,使用 git rebase --abort
