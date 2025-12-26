@@ -94,3 +94,48 @@ git rebase --continue
 # 最后强制推送
 git push --force
 ```
+
+example
+
+```bash
+# 1. 先查看当前的提交历史，确认哪些提交需要修改
+git log --oneline -5
+# 输出示例：
+# abc1234 (HEAD -> main, origin/main) 修复了登录bug
+# def5678 添加了用户注册功能
+# ghi9012 更新README
+# ...
+
+# 2. 修改本地 Git 配置（避免以后再出错）
+git config user.name "Zhang San"
+git config user.email "zhangsan@example.com"
+
+# 3. 开始交互式 rebase，修改最近 2 个提交
+git rebase -i HEAD~2
+
+# 4. 编辑器会打开，显示类似这样的内容：
+# pick def5678 添加了用户注册功能
+# pick abc1234 修复了登录bug
+#
+# 将前面的 pick 改为 edit：
+# edit def5678 添加了用户注册功能
+# edit abc1234 修复了登录bug
+# 保存并关闭编辑器
+
+# 5. 对第一个提交修改作者
+git commit --amend --author="Zhang San <zhangsan@example.com>" --no-edit
+git rebase --continue
+
+# 6. 对第二个提交修改作者
+git commit --amend --author="Zhang San <zhangsan@example.com>" --no-edit
+git rebase --continue
+
+# 7. 验证修改结果
+git log -2 --pretty=format:"%h %an <%ae> %s"
+# 应该显示：
+# abc1234 Zhang San <zhangsan@example.com> 修复了登录bug
+# def5678 Zhang San <zhangsan@example.com> 添加了用户注册功能
+
+# 8. 强制推送到远程仓库
+git push --force origin main
+```
