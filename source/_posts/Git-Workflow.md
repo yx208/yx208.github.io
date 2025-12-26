@@ -58,3 +58,39 @@ git push origin --delete <分支名>
 git push origin :<分支名>
 ```
 
+## 推送更新后更改用户名
+
+修改用户名
+
+```bash
+# 修改全局配置
+git config --global user.name "正确的用户名"
+git config --global user.email "正确的邮箱"
+
+# 或者只修改当前项目的配置
+git config user.name "正确的用户名"
+git config user.email "正确的邮箱"
+```
+
+更新历史提交
+
+```bash
+# git commit --amend --author="yx208 <yx208@example.com>"
+git commit --amend --author="正确的用户名 <正确的邮箱>"
+git push --force
+```
+
+修改多个提交
+
+```bash
+# 修改最近 3 个提交（根据实际情况调整数字）
+git rebase -i HEAD~3
+
+# 在打开的编辑器中，将需要修改的提交前的 pick 改为 edit
+# 然后对每个标记为 edit 的提交执行：
+git commit --amend --author="正确的用户名 <正确的邮箱>" --no-edit
+git rebase --continue
+
+# 最后强制推送
+git push --force
+```
