@@ -20,6 +20,37 @@ git reset --soft HEAD^
 git push -f
 ```
 
+### 执行 reset 后想回到 reset 之前的状态
+
+最简单
+
+```bash
+git reset --soft HEAD@{1}
+```
+
+#### 保险方法: 查看 reflog 历史
+
+```bash
+git reflog
+
+# 输出
+a1b2c3d HEAD@{0}: reset: moving to HEAD^
+e4f5g6h HEAD@{1}: commit: 你的提交信息
+```
+
+找到 reset 之前的提交 hash（通常是 HEAD@{1} 那一行），然后：
+
+```bash
+git reset --soft e4f5g6h
+# 或者
+git reset --soft HEAD@{1}
+```
+
+tip：
+- git reflog 记录了所有 HEAD 移动的历史，包括 reset、checkout、commit 等操作
+- HEAD@{1} 是引用日志中的相对引用，表示 HEAD 在 1 步之前的位置
+- 使用 --soft 选项保持暂存区和工作区不变
+
 ## 在提交 PR 之前合并代码到最新的分支解决冲突
 
 ```
