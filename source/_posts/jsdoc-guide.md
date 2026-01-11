@@ -1,4 +1,10 @@
-# JSDoc 编写 JavaScript 文档
+---
+title: JSDoc 编写 JavaScript 文档
+date: 2026/01/11 18:40:00
+categories: jsdoc
+tags:
+  - JavaScript
+---
 
 ## 简介
 
@@ -328,10 +334,6 @@ jsdoc src/ -d docs/
 ```bash
 jsdoc -c jsdoc.json
 ```
-
-## 总结
-
-JSDoc 是提升 JavaScript 代码可维护性的重要工具。通过合理使用 `@link`、`@param`、`@returns` 等标签，可以创建清晰、专业的 API 文档。关键是保持一致性，提供有价值的信息，并定期维护文档与代码的同步。
 
 ## 参考资源
 
